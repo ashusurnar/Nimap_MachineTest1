@@ -1,0 +1,40 @@
+﻿  @model Nimap_MachineTest1.Models.Category
+
+<div class="container">
+    <div class="row-cols-2">
+        <div class="card">
+            <div class="card-header">
+
+                <h2 class="text-center text-primary">Edit Category</h2>
+                <div class="card-body">
+                    <form method="post" asp-action="Edit">
+                        <div class="form-group">
+                            <label asp-for="CategoryId"></label>
+                            <input asp-for="CategoryId" type="text" class="form-control" placeholder="Enter id" />
+                            <span asp-validation-for="CategoryId"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="CategoryName"></label>
+                            <input asp-for="CategoryName" type="text" class="form-control" placeholder="Enter Name" />
+                            <span asp-validation-for="CategoryName"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="submit" class="btn  btn-outline-danger " />
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+

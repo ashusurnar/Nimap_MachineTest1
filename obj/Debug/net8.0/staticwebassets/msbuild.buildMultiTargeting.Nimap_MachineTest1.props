@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Nimap_MachineTest1.props" />
+</Project>

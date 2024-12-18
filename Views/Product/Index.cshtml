@@ -1,0 +1,61 @@
+﻿ @model IEnumerable<Nimap_MachineTest1.Models.ProductCategoryModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h2 class="text-center  p-1 border border-dark text-primary">Product</h2>
+            <div class="mb-1">
+                <a class="btn btn-sm btn-success" asp-controller="Product" asp-action="Create">Create</a>
+
+            </div>
+            
+
+             
+
+
+
+
+            <table class="table table-bordered">
+                <tr class="text-center table-bordered">
+                    <th>ProductId</th>
+                    <th>ProductName</th>
+                    <th>CategoryId</th>
+                    <th>CategoryName</th>
+                    <th>Actions</th>
+
+                </tr>
+                @foreach (var ct in Model)
+                {
+                    <tr>
+                        <td>@ct.ProductId</td>
+                        <td>@ct.ProductName</td>
+                        <td>@ct.CategoryId</td>
+                        <td>@ct.CategoryName</td>
+                        <td>
+                            <a class="btn btn-warning" asp-controller="Product" asp-action="Edit" asp-route-id="@ct.ProductId">Edit</a>
+                            <a class="btn btn-outline-danger" asp-controller="Product" asp-action="Delete" asp-route-id="@ct.ProductId">Delete</a>
+                        </td>
+                    </tr>
+                }
+
+            </table> 
+           @*  <div>
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <a href="@Url.Action("Index", new { page = i })"
+                       class="@(i == ViewBag.CurrentPage ? "btn btn-primary" : "btn btn-secondary")">
+                        @i
+                    </a>
+                }
+            </div> *@
+
+
+
+        </div>
+
+    </div>
+
+</div>

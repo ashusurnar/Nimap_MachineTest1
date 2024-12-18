@@ -1,0 +1,79 @@
+﻿  @model Nimap_MachineTest1.Models.Product
+
+<div class="container">
+    <div class="row-cols-2">
+        <div class="card">
+            <div class="card-header">
+
+                <h2 class="text-center text-primary">Edit Product</h2>
+                <div class="card-body">
+                    <form method="post" asp-action="Edit">
+                        <div class="form-group">
+                            <label asp-for="ProductId"></label>
+                            <input asp-for="ProductId" type="text" class="form-control" placeholder="Enter id" />
+                            <span asp-validation-for="ProductId"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ProductName"></label>
+                            <input asp-for="ProductName" type="text" class="form-control" placeholder="Enter Product Name" />
+                            <span asp-validation-for="ProductName"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="CategoryId"></label>
+                            <select class="form-control" asp-for="CategoryId" value="">
+                                <option value="">Select Category</option>
+                                <option value="0">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                                <option value="4">5</option>
+                                <option value="5">6</option>
+                                <option value="6">7</option>
+                                <option value="7">8</option>
+                                <option value="8">9</option>
+
+                            </select>
+
+
+                            <span asp-validation-for="CategoryName"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="CategoryName"></label>
+                            <select class="form-control" asp-for="CategoryName" value="">
+                                <option value="">Select Category</option>
+                                <option value="0">Books</option>
+                                <option value="1">Fruits</option>
+                                <option value="2">Phone</option>
+                                <option value="3">Cars</option>
+                                <option value="4">Bikes</option>
+                                <option value="5">Company</option>
+                                <option value="6">Fans</option>
+                                <option value="7">Laptops</option>
+                                <option value="8">Televisons</option>
+
+                            </select>
+
+
+                            <span asp-validation-for="CategoryName"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="submit" class="btn  btn-outline-danger"/>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+

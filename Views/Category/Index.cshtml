@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Nimap_MachineTest1.Models.Category>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h2 class="text-center text-primary">Category</h2>
+            <div class="mb-1">
+                <a class="btn btn-sm btn-success" asp-controller="Category" asp-action="Create">Create</a>
+
+            </div>
+            <table class="table table-bordered">
+                <tr class="text-center table-bordered">
+                    <th>CategoryId</th>
+                    <th>CategoryName</th>
+                    <th>Actions</th>
+
+                </tr>
+                @foreach (var ct in Model)
+                {
+                    <tr>
+                        <td>@ct.CategoryId</td>
+                        <td>@ct.CategoryName</td>
+                        <td>
+                            <a class="btn btn-warning" asp-controller="Category" asp-action="Edit" asp-route-id="@ct.CategoryId">Edit</a>
+                            <a class="btn btn-outline-danger" asp-controller="Category" asp-action="Delete" asp-route-id="@ct.CategoryId">Delete</a>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
